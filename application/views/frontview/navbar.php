@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row" id="navcontainer" style="padding-bottom:6px;">
         <div class="col-lg-12 col-md-12 col-xs-12">
-            <a href="<?php echo base_url();?>"><img src="<?php echo base_url()?>assets/frontview/img/logo_kunjang.PNG"  class="logo_main"></a>
+            <a href="<?php echo base_url();?>"><img src="<?php echo base_url()?>assets/frontview/img/logo_kunjang.svg"  class="logo_main"></a>
             <div class="float-right infobar" >
                 <span><i class="lnr lnr-phone-handset"></i>&nbsp;&nbsp;<span>Phone : 088227601783</span></span>
                 <span><i class="lnr lnr-envelope"></i>&nbsp;&nbsp;<span> seno262000@gmail.com </span></span>

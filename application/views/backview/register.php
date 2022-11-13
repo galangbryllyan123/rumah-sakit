@@ -1,5 +1,5 @@
 <div class="splash-container">
-    <center><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/frontview/img/logo2.png" alt=""></a></center>
+    <center><a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/frontview/img/logo_kunjang.png" alt=""></a></center>
     <br/>
     <div class="card">
         <div class="card-header">
