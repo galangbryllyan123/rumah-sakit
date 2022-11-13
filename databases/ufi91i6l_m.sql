@@ -361,7 +361,7 @@ CREATE TABLE `jadwaldokter` (
 
 INSERT INTO `jadwaldokter` (`id`, `image_name`, `caption`, `date_created`) VALUES
 (9, '—Pngtree—mobile_phone_click_online_purchase_4986617_(1).png', 'aplikasi', '0000-00-00 00:00:00'),
-(32, 'flyerblog.png', 'jadwal dokter1', '0000-00-00 00:00:00'),
+(32, 'logo_kunjang.png', 'jadwal dokter1', '0000-00-00 00:00:00'),
 (34, 'flyerblog1.png', 'jadwal dokter2', '0000-00-00 00:00:00'),
 (35, 'flyerblog2.png', 'jadwal dokter3', '0000-00-00 00:00:00');
 

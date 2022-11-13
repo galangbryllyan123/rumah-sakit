@@ -39,7 +39,7 @@
                 ?>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-12">
-                <img src="<?php echo base_url()?>assets/frontview/img/flyerblog.png" style="width:inherit;margin-bottom:30px;border-radius:10px;">
+                <img src="<?php echo base_url()?>assets/frontview/img/logo_kunjang.png" style="width:inherit;margin-bottom:30px;border-radius:10px;">
             </div>
         </div>
     </div>
