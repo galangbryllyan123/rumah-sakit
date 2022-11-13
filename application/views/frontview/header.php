@@ -8,7 +8,7 @@
     <meta name="author" content="Galang Bryllyan Wicaksono/Seno kidal">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rumah Sakit Semarang</title>
-    <link rel="icon" href="<?php echo base_url();?>/assets/frontview/img/favicon.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="<?php echo base_url();?>/assets/frontview/img/logo_kunjang.png" sizes="16x16" type="image/png">
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,700&display=swap" rel="stylesheet">
     <!-- Css Styles -->

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RS. Semarang</title>
-    <link rel="icon" href="<?php echo base_url();?>/assets/frontview/img/favicon.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="<?php echo base_url();?>/assets/frontview/img/logo_kunjang.png" sizes="16x16" type="image/png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?php echo base_url()?>assets/backview/vendor/bootstrap/css/bootstrap.min.css">
     <link href="<?php echo base_url()?>assets/backview/vendor/fonts/circular-std/style.css" rel="stylesheet">
