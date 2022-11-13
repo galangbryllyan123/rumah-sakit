@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 13, 2022 at 03:17 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.27
+-- Host: localhost:3306
+-- Generation Time: Nov 13, 2022 at 07:55 PM
+-- Server version: 5.7.37-cll-lve
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -39,10 +40,10 @@ CREATE TABLE `banner` (
 --
 
 INSERT INTO `banner` (`id`, `image_name`, `caption`, `date_created`) VALUES
-(23, 'hospital1.jpg', '', '0000-00-00 00:00:00'),
-(24, 'hospital21.jpg', '', '0000-00-00 00:00:00'),
 (38, 'pondok.jpg', '', '0000-00-00 00:00:00'),
-(39, 'pkc_img-94531541648821_profile.jpg', '', '0000-00-00 00:00:00');
+(39, 'pkc_img-94531541648821_profile.jpg', '', '0000-00-00 00:00:00'),
+(40, 'nav-1.jpg', '', '0000-00-00 00:00:00'),
+(41, 'WhatsApp_Image_2022-09-06_at_02_01_30.jpeg', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -90,8 +91,7 @@ CREATE TABLE `blog` (
   `subtitle` text NOT NULL,
   `slug` text NOT NULL,
   `author_id` int(11) NOT NULL,
-  `date_created` datetime,
-  --  `date_created` date NOT NULL DEFAULT current_timestamp(),
+  `date_created` datetime DEFAULT NULL,
   `max_length` text NOT NULL,
   `image_path` text NOT NULL,
   `content` text NOT NULL,
@@ -107,8 +107,9 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`blog_id`, `title`, `subtitle`, `slug`, `author_id`, `date_created`, `max_length`, `image_path`, `content`, `category`, `tag`, `bookmark`, `likes`, `type`) VALUES
-(27, 'progammer', '', 'progammer', 13, '2020-04-26', '', 'hospitalhallway.jpg', '<p>RS beberapa waktu lalu menerima kunjungan studi banding dari RS . Kunjungan dipimpin oleh Ketua Yayasan Rumah Sakit, H. Djuliar Rasyid dan Direktur Rumah Sakit , dr. Tony Siguntang, Sp.THT-KL. Kunjungan disambut oleh Direktur RSIY PDHI, dr. Widodo , MPH dan jajaran manajerial.</p>\r\n\r\n<p>Menurut penuturan Manajer SDM RSIY PDHI, H. Karnadi, kunjungan tersebut dalam rangka studi banding tentang rumah sakit Islam syariah. Mereka ingin belajar tentang syariah dalam rumah sakit karena sedang menuju proses ke arah sana. “Mereka memilih RS karena rumah sakit kita sudah dikenal di semarang,” tuturnya.</p>\r\n\r\n<p>Meskipun, lanjut Karnadi, RS belum menjadi rumah sakit syariah, namun kita juga masih mempersiapkan diri untuk menuju ke arah sana. Secara praktik, RS sudah mendasarkan pelayanannya pada syariah. Seperti sudah memisahkan pasien antara laki-laki dan perempuan dengan memiliki ruangan secara terpisah. Layanan gizi pasien juga sudah terjamin kehalalannya. “Bahkan pelayanan keruhaniaan rumah sakit, khususnya bagi karyawan kita dilakukan secara aktif,” terangnya.</p>\r\n\r\n<p>Di RS, para tamu undangan dari RS  ini belajar banyak tentang bagaimana struktur organisasi, penerapan syariah hingga pembinaan ruhani. Selain itu, mereka juga menanyakan tentang akreditasi RS yang diraih secara paripurna oleh RS. “Mereka bertanya banyak tentang itu juga karena salah satu syarat menuju rumah sakit syariah adalah harus terakreditasi dari Komisi Akreditasi Rumah Sakit (KARS),” terang Karnadi.</p>\r\n', '1', '', 0, 0, 1),
-(30, 'Tidak Bicara dan Makan di Kendaraan Umum Bantu Cegah Penyebaran COVID-19', '', 'tidak-bicara-dan-makan-di-kendaraan-umum-bantu-cegah-penyebaran-covid-19', 13, '2020-07-16', '', 'reisa-broto-asmoro.jpg', '<p>Juru bicara penanganan COVID-19, Achmad yurianto mengingatkan untuk tidak melakukan aktivitas seperti makan maupun berbicara selama berada di kendaraan umum. Ini untuk mencegah percikan droplet saat berbicara, batuk maupun bersin.</p>\r\n\r\n<p> </p>\r\n\r\n<p>Menurut Yuri, jika terpaksa harus berbicara, sebaiknya tetap menggunakan masker dan jaga jarak aman.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;Jangan berbicara, jangan makan, jangan minum didalam kendaraan umum, karena ini akan membuat kita menjadi lengah, apabila kita harus berbicara dengan orang lain tetap jaga jarak dan tidak berusaha mendekat ke arah orang yang kita ajak bicara, gunakan masker,&#39;&#39; kata Yuri dalam keteranganya di Graha BNPB, Jakarta, Senin sore (13/7).</p>\r\n\r\n<p> </p>\r\n\r\n<p>Selalu menggunakan masker juga harus digunakan saat berbicara dengan orang yang dikenal. Yuri menjelaskan, masih banyak masyarakat yang abai menerapkan protokol Kesehatan, dengan melepas masker saat berbicara dengan kolega maupun rekan kerja dengan dalih saling mengenal satu sama lain. Ketidakdisipliann inilah yang menyebabkan masih tingginya kasus positif di Indonesia.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;Kita harus meyakini bahwa menggunakan masker harus dilakukan sekalipun kita merasa berada orang-orang yang sudah kita kenal seperti kolega taupun rekan kerja, tetap gunakan masker karena kesalahan justru terjadi di tempat yang seperti itu. Kita tidak tahu siapa yang terkena dan membawa virus itu disekitar kita,&#39;&#39; tuturnya.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;Kita masih memperhatikan banyak sekali yang belum secara disiplin dan konsisten menggunakan masker dan jaga jarak, ini yang menjadi salah satu penyebab penambahan kasus akan terus menerus terjadi,&#39;&#39; imbuh Yuri.</p>\r\n\r\n<p> </p>\r\n\r\n<p>Untuk itu, Yuri Kembali mengingatkan agar protokol Kesehatan dijalankan dengan semaksimal mungkin dengan menggunakan masker dengan baik dan benar, mencuci tangan dengan sabun, jaga jarak aman 1-2 meter dengan orang lain serta hindari kerumunan.</p>\r\n\r\n<p> </p>\r\n\r\n<p><strong>Perkambangan Kasus COVID-19</strong></p>\r\n\r\n<p> </p>\r\n\r\n<p>Untuk diketahui, per tanggal 13 Juli, terjadi penambahan kasus positif sebanyak 1.282. dengan demikian total kasus positif COVID-19 menjadi 76.981 orang.</p>\r\n\r\n<p> </p>\r\n\r\n<p>Penambahan kasus tersebut didapatkan dari pemeriksaan specimen sebanyak 13.100, total specimen yang diperiksa hingga saat ini menjadi 1.074.467.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;DKI Jakarta melaporkan 281 kasus baru, Jawa Timur 219 kasus baru, Sulawesi Selatan 124 kasus baru, Jawa Tengah 100 kasus baru, Papua 98 kasus baru, Jawa Barat 83 kasus baru,&#39;&#39; kata Achmad Yurianto dalam keteranganya di Graha BNPB, Jakarta, Senin sore (13/7).</p>\r\n\r\n<p> </p>\r\n\r\n<p>Sementara itu, Yuri menyebutkan ada 19 provinsi yang hari ini melaporkan kasus baru dibawah 10, dan 9 provinsi tidak ada kasus baru diantaranya Aceh, Bangka Belitung, Bengkulu, Jambi, Kepulauan Riau, Sumatera Barat, Sulawesi Tengah, Papua Barat, Nusa Tenggara Tenggara Timur.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;Kasus sembuh bertambah 1.051 orang sehingga totalnya mejadi 36.689 orang, 50 orang dilaporkan meninggal hari ini totalnya menjadi 3.656,&#39;&#39; terangnya.</p>\r\n\r\n<p> </p>\r\n\r\n<p>Pemerintah juga masih melakukan pemantauan terhadap ODP sebanyak 33.504 orang dan pengawasan terhadap PDP sebanyak 13.349 orang.</p>\r\n', '2', '', 0, 0, 1);
+(27, 'progammer', '', 'progammer', 13, '2020-04-26 00:00:00', '', 'hospitalhallway.jpg', '<p>RS beberapa waktu lalu menerima kunjungan studi banding dari RS . Kunjungan dipimpin oleh Ketua Yayasan Rumah Sakit, H. Djuliar Rasyid dan Direktur Rumah Sakit , dr. Tony Siguntang, Sp.THT-KL. Kunjungan disambut oleh Direktur RSIY PDHI, dr. Widodo , MPH dan jajaran manajerial.</p>\r\n\r\n<p>Menurut penuturan Manajer SDM RSIY PDHI, H. Karnadi, kunjungan tersebut dalam rangka studi banding tentang rumah sakit Islam syariah. Mereka ingin belajar tentang syariah dalam rumah sakit karena sedang menuju proses ke arah sana. “Mereka memilih RS karena rumah sakit kita sudah dikenal di semarang,” tuturnya.</p>\r\n\r\n<p>Meskipun, lanjut Karnadi, RS belum menjadi rumah sakit syariah, namun kita juga masih mempersiapkan diri untuk menuju ke arah sana. Secara praktik, RS sudah mendasarkan pelayanannya pada syariah. Seperti sudah memisahkan pasien antara laki-laki dan perempuan dengan memiliki ruangan secara terpisah. Layanan gizi pasien juga sudah terjamin kehalalannya. “Bahkan pelayanan keruhaniaan rumah sakit, khususnya bagi karyawan kita dilakukan secara aktif,” terangnya.</p>\r\n\r\n<p>Di RS, para tamu undangan dari RS  ini belajar banyak tentang bagaimana struktur organisasi, penerapan syariah hingga pembinaan ruhani. Selain itu, mereka juga menanyakan tentang akreditasi RS yang diraih secara paripurna oleh RS. “Mereka bertanya banyak tentang itu juga karena salah satu syarat menuju rumah sakit syariah adalah harus terakreditasi dari Komisi Akreditasi Rumah Sakit (KARS),” terang Karnadi.</p>\r\n', '1', '', 0, 0, 1),
+(30, 'Tidak Bicara dan Makan di Kendaraan Umum Bantu Cegah Penyebaran COVID-19', '', 'tidak-bicara-dan-makan-di-kendaraan-umum-bantu-cegah-penyebaran-covid-19', 13, '2020-07-16 00:00:00', '', 'reisa-broto-asmoro.jpg', '<p>Juru bicara penanganan COVID-19, Achmad yurianto mengingatkan untuk tidak melakukan aktivitas seperti makan maupun berbicara selama berada di kendaraan umum. Ini untuk mencegah percikan droplet saat berbicara, batuk maupun bersin.</p>\r\n\r\n<p> </p>\r\n\r\n<p>Menurut Yuri, jika terpaksa harus berbicara, sebaiknya tetap menggunakan masker dan jaga jarak aman.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;Jangan berbicara, jangan makan, jangan minum didalam kendaraan umum, karena ini akan membuat kita menjadi lengah, apabila kita harus berbicara dengan orang lain tetap jaga jarak dan tidak berusaha mendekat ke arah orang yang kita ajak bicara, gunakan masker,&#39;&#39; kata Yuri dalam keteranganya di Graha BNPB, Jakarta, Senin sore (13/7).</p>\r\n\r\n<p> </p>\r\n\r\n<p>Selalu menggunakan masker juga harus digunakan saat berbicara dengan orang yang dikenal. Yuri menjelaskan, masih banyak masyarakat yang abai menerapkan protokol Kesehatan, dengan melepas masker saat berbicara dengan kolega maupun rekan kerja dengan dalih saling mengenal satu sama lain. Ketidakdisipliann inilah yang menyebabkan masih tingginya kasus positif di Indonesia.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;Kita harus meyakini bahwa menggunakan masker harus dilakukan sekalipun kita merasa berada orang-orang yang sudah kita kenal seperti kolega taupun rekan kerja, tetap gunakan masker karena kesalahan justru terjadi di tempat yang seperti itu. Kita tidak tahu siapa yang terkena dan membawa virus itu disekitar kita,&#39;&#39; tuturnya.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;Kita masih memperhatikan banyak sekali yang belum secara disiplin dan konsisten menggunakan masker dan jaga jarak, ini yang menjadi salah satu penyebab penambahan kasus akan terus menerus terjadi,&#39;&#39; imbuh Yuri.</p>\r\n\r\n<p> </p>\r\n\r\n<p>Untuk itu, Yuri Kembali mengingatkan agar protokol Kesehatan dijalankan dengan semaksimal mungkin dengan menggunakan masker dengan baik dan benar, mencuci tangan dengan sabun, jaga jarak aman 1-2 meter dengan orang lain serta hindari kerumunan.</p>\r\n\r\n<p> </p>\r\n\r\n<p><strong>Perkambangan Kasus COVID-19</strong></p>\r\n\r\n<p> </p>\r\n\r\n<p>Untuk diketahui, per tanggal 13 Juli, terjadi penambahan kasus positif sebanyak 1.282. dengan demikian total kasus positif COVID-19 menjadi 76.981 orang.</p>\r\n\r\n<p> </p>\r\n\r\n<p>Penambahan kasus tersebut didapatkan dari pemeriksaan specimen sebanyak 13.100, total specimen yang diperiksa hingga saat ini menjadi 1.074.467.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;DKI Jakarta melaporkan 281 kasus baru, Jawa Timur 219 kasus baru, Sulawesi Selatan 124 kasus baru, Jawa Tengah 100 kasus baru, Papua 98 kasus baru, Jawa Barat 83 kasus baru,&#39;&#39; kata Achmad Yurianto dalam keteranganya di Graha BNPB, Jakarta, Senin sore (13/7).</p>\r\n\r\n<p> </p>\r\n\r\n<p>Sementara itu, Yuri menyebutkan ada 19 provinsi yang hari ini melaporkan kasus baru dibawah 10, dan 9 provinsi tidak ada kasus baru diantaranya Aceh, Bangka Belitung, Bengkulu, Jambi, Kepulauan Riau, Sumatera Barat, Sulawesi Tengah, Papua Barat, Nusa Tenggara Tenggara Timur.</p>\r\n\r\n<p> </p>\r\n\r\n<p>&#39;&#39;Kasus sembuh bertambah 1.051 orang sehingga totalnya mejadi 36.689 orang, 50 orang dilaporkan meninggal hari ini totalnya menjadi 3.656,&#39;&#39; terangnya.</p>\r\n\r\n<p> </p>\r\n\r\n<p>Pemerintah juga masih melakukan pemantauan terhadap ODP sebanyak 33.504 orang dan pengawasan terhadap PDP sebanyak 13.349 orang.</p>\r\n', '2', '', 0, 0, 1),
+(31, 'jasa koding', '', 'jasa-koding', 13, '2022-11-13 00:00:00', '', '', '<p>web,android,ios</p>\r\n', '2', '', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -123,7 +124,7 @@ CREATE TABLE `contact` (
   `telepon` bigint(20) NOT NULL,
   `subject` text NOT NULL,
   `pesan` text NOT NULL,
-  `kritiksaran` text DEFAULT NULL
+  `kritiksaran` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -296,7 +297,8 @@ INSERT INTO `galeri` (`id`, `image_name`, `caption`, `date_created`) VALUES
 (27, 'photo-1526784725085-c69e947bf92e.jpeg', 'image one', '0000-00-00 00:00:00'),
 (28, 'photo-1526288834969-1bc3a0a94dc9.jpeg', 'image two', '0000-00-00 00:00:00'),
 (29, 'photo-1526382551041-3c817fc3d478.jpeg', 'image three', '0000-00-00 00:00:00'),
-(30, 'photo-1525826212383-92e29530133e.jpeg', 'image for', '0000-00-00 00:00:00');
+(30, 'photo-1525826212383-92e29530133e.jpeg', 'image for', '0000-00-00 00:00:00'),
+(31, 'Safeimagekit-1_(1).png', 'skripsi saya', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -316,7 +318,6 @@ CREATE TABLE `galeri_video` (
 --
 
 INSERT INTO `galeri_video` (`id`, `link`, `caption`, `date_created`) VALUES
-(4, 'https://www.youtube.com/embed/9YBf1eLW_F8', 'Youtube first', '0000-00-00 00:00:00'),
 (9, 'https://www.youtube.com/watch?v=2j-SfSghDvc', 'aplikasi', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
@@ -526,36 +527,36 @@ CREATE TABLE `notifikasi` (
 --
 
 INSERT INTO `notifikasi` (`id`, `pesan`, `date_created`, `status`, `type`, `konteks`, `link`) VALUES
-(4, 'Kontak terbaru dari Budi Gunawan', '2020-06-07 10:25:27', 'unread', 'kontak', '', '/admin/kontak'),
-(5, 'M. Ridwan Zalbina terdaftar sebagai calon pasien', '2020-07-16 01:15:53', 'unread', 'kontak', '', '/admin/pasien'),
-(6, 'M. Ridwan Zalbina terdaftar sebagai calon pasien', '2020-07-16 01:19:37', 'unread', 'kontak', '', '/admin/pasien'),
-(7, 'User baru melakukan pendaftaran melalui form dengan posisi Office Boy', '2020-07-16 05:40:24', 'unread', 'kontak', '', '/admin/karir'),
-(8, 'Kontak terbaru dari Dewi Sastralena', '2020-07-20 07:49:13', 'unread', 'kontak', '', '/admin/kontak'),
-(9, 'Dewi Sastralena terdaftar sebagai calon pasien', '2020-07-20 08:47:32', 'unread', 'kontak', '', '/admin/pasien'),
-(10, ' terdaftar sebagai calon pasien', '2020-07-21 10:02:48', 'unread', 'kontak', '', '/admin/pasien'),
-(11, 'Hendra terdaftar sebagai calon pasien', '2020-07-24 10:27:05', 'unread', 'kontak', '', '/admin/pasien'),
-(12, ' terdaftar sebagai calon pasien', '2020-07-24 04:20:55', 'unread', 'kontak', '', '/admin/pasien'),
-(13, 'dewi sastralena terdaftar sebagai calon pasien', '2020-07-27 12:31:39', 'unread', 'kontak', '', '/admin/pasien'),
-(14, 'Kontak terbaru dari dewi sastralena', '2020-07-27 01:33:26', 'unread', 'kontak', '', '/admin/kontak'),
-(16, 'User baru melakukan pendaftaran melalui form dengan posisi Staf IT', '2020-07-28 09:27:21', 'unread', 'kontak', '', '/admin/karir'),
-(17, 'User baru melakukan pendaftaran melalui form dengan posisi Staf Legal', '2020-07-28 09:39:52', 'unread', 'kontak', '', '/admin/karir'),
-(18, 'User baru melakukan pendaftaran melalui form dengan posisi Staf IT', '2020-07-28 12:23:03', 'unread', 'kontak', '', '/admin/karir'),
-(19, 'User baru melakukan pendaftaran melalui form dengan posisi Staf IT', '2020-07-28 12:23:10', 'unread', 'kontak', '', '/admin/karir'),
-(20, 'User baru melakukan pendaftaran melalui form dengan posisi Staf IT', '2020-07-28 12:23:18', 'unread', 'kontak', '', '/admin/karir'),
-(21, 'User baru melakukan pendaftaran melalui form dengan posisi IT', '2020-07-28 12:23:47', 'unread', 'kontak', '', '/admin/karir'),
-(22, 'User baru melakukan pendaftaran melalui form dengan posisi IT', '2020-07-28 12:24:18', 'unread', 'kontak', '', '/admin/karir'),
-(23, 'User baru melakukan pendaftaran melalui form dengan posisi IT', '2020-07-29 01:13:10', 'unread', 'kontak', '', '/admin/karir'),
-(24, 'User baru melakukan pendaftaran melalui form dengan posisi IT', '2020-07-29 01:14:41', 'unread', 'kontak', '', '/admin/karir'),
-(26, 'Kontak terbaru dari dewi sastralena', '2020-07-29 01:15:30', 'unread', 'kontak', '', '/admin/kontak'),
-(27, 'User baru melakukan pendaftaran melalui form dengan posisi Office Boy', '2020-07-29 03:31:54', 'unread', 'kontak', '', '/admin/karir'),
-(31, 'dewi sastralena terdaftar sebagai calon pasien', '2020-07-30 11:32:10', 'unread', 'kontak', '', '/admin/pasien'),
-(32, ' terdaftar sebagai calon pasien', '2020-07-31 07:01:26', 'unread', 'kontak', '', '/admin/pasien'),
-(33, 'Kontak terbaru dari Nathan Visser', '2020-07-31 05:14:40', 'unread', 'kontak', '', '/admin/kontak'),
-(34, 'Kontak terbaru dari Travisidowl', '2020-08-01 02:24:38', 'unread', 'kontak', '', '/admin/kontak'),
-(35, ' terdaftar sebagai calon pasien', '2020-08-03 01:36:46', 'unread', 'kontak', '', '/admin/pasien'),
-(36, 'Kontak terbaru dari ican', '2020-08-04 01:31:38', 'unread', 'kontak', '', '/admin/kontak'),
-(37, 'Kontak terbaru dari CindyCed', '2020-08-04 08:39:50', 'unread', 'kontak', '', '/admin/kontak'),
-(38, 'Kontak terbaru dari Jimmy Scowley', '2020-08-11 05:33:44', 'unread', 'kontak', '', '/admin/kontak');
+(4, 'Kontak terbaru dari Budi Gunawan', '2020-06-07 10:25:27', 'unread', '', '', '/admin/kontak'),
+(5, 'M. Ridwan Zalbina terdaftar sebagai calon pasien', '2020-07-16 01:15:53', 'unread', '', '', '/admin/pasien'),
+(6, 'M. Ridwan Zalbina terdaftar sebagai calon pasien', '2020-07-16 01:19:37', 'unread', '', '', '/admin/pasien'),
+(7, 'User baru melakukan pendaftaran melalui form dengan posisi Office Boy', '2020-07-16 05:40:24', 'unread', '', '', '/admin/karir'),
+(8, 'Kontak terbaru dari Dewi Sastralena', '2020-07-20 07:49:13', 'unread', '', '', '/admin/kontak'),
+(9, 'Dewi Sastralena terdaftar sebagai calon pasien', '2020-07-20 08:47:32', 'unread', '', '', '/admin/pasien'),
+(10, ' terdaftar sebagai calon pasien', '2020-07-21 10:02:48', 'unread', '', '', '/admin/pasien'),
+(11, 'Hendra terdaftar sebagai calon pasien', '2020-07-24 10:27:05', 'unread', '', '', '/admin/pasien'),
+(12, ' terdaftar sebagai calon pasien', '2020-07-24 04:20:55', 'unread', '', '', '/admin/pasien'),
+(13, 'dewi sastralena terdaftar sebagai calon pasien', '2020-07-27 12:31:39', 'unread', '', '', '/admin/pasien'),
+(14, 'Kontak terbaru dari dewi sastralena', '2020-07-27 01:33:26', 'unread', '', '', '/admin/kontak'),
+(16, 'User baru melakukan pendaftaran melalui form dengan posisi Staf IT', '2020-07-28 09:27:21', 'unread', '', '', '/admin/karir'),
+(17, 'User baru melakukan pendaftaran melalui form dengan posisi Staf Legal', '2020-07-28 09:39:52', 'unread', '', '', '/admin/karir'),
+(18, 'User baru melakukan pendaftaran melalui form dengan posisi Staf IT', '2020-07-28 12:23:03', 'unread', '', '', '/admin/karir'),
+(19, 'User baru melakukan pendaftaran melalui form dengan posisi Staf IT', '2020-07-28 12:23:10', 'unread', '', '', '/admin/karir'),
+(20, 'User baru melakukan pendaftaran melalui form dengan posisi Staf IT', '2020-07-28 12:23:18', 'unread', '', '', '/admin/karir'),
+(21, 'User baru melakukan pendaftaran melalui form dengan posisi IT', '2020-07-28 12:23:47', 'unread', '', '', '/admin/karir'),
+(22, 'User baru melakukan pendaftaran melalui form dengan posisi IT', '2020-07-28 12:24:18', 'unread', '', '', '/admin/karir'),
+(23, 'User baru melakukan pendaftaran melalui form dengan posisi IT', '2020-07-29 01:13:10', 'unread', '', '', '/admin/karir'),
+(24, 'User baru melakukan pendaftaran melalui form dengan posisi IT', '2020-07-29 01:14:41', 'unread', '', '', '/admin/karir'),
+(26, 'Kontak terbaru dari dewi sastralena', '2020-07-29 01:15:30', 'unread', '', '', '/admin/kontak'),
+(27, 'User baru melakukan pendaftaran melalui form dengan posisi Office Boy', '2020-07-29 03:31:54', 'unread', '', '', '/admin/karir'),
+(31, 'dewi sastralena terdaftar sebagai calon pasien', '2020-07-30 11:32:10', 'unread', '', '', '/admin/pasien'),
+(32, ' terdaftar sebagai calon pasien', '2020-07-31 07:01:26', 'unread', '', '', '/admin/pasien'),
+(33, 'Kontak terbaru dari Nathan Visser', '2020-07-31 05:14:40', 'unread', '', '', '/admin/kontak'),
+(34, 'Kontak terbaru dari Travisidowl', '2020-08-01 02:24:38', 'unread', '', '', '/admin/kontak'),
+(35, ' terdaftar sebagai calon pasien', '2020-08-03 01:36:46', 'unread', '', '', '/admin/pasien'),
+(36, 'Kontak terbaru dari ican', '2020-08-04 01:31:38', 'unread', '', '', '/admin/kontak'),
+(37, 'Kontak terbaru dari CindyCed', '2020-08-04 08:39:50', 'unread', '', '', '/admin/kontak'),
+(38, 'Kontak terbaru dari Jimmy Scowley', '2020-08-11 05:33:44', 'unread', '', '', '/admin/kontak');
 
 -- --------------------------------------------------------
 
@@ -871,7 +872,7 @@ ALTER TABLE `visimisi`
 -- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `banner_jadwal_dokter`
@@ -889,7 +890,7 @@ ALTER TABLE `banner_karir`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -925,7 +926,7 @@ ALTER TABLE `dokter`
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `galeri_video`
