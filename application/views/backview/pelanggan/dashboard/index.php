@@ -43,7 +43,7 @@
 	                                            <div class="user-avatar-info">
 	                                                <div class="m-b-20">
 	                                                    <div class="user-avatar-name">
-	                                                        <h2 class="mb-1">Henry Barbara</h2>
+	                                                        <h2 class="mb-1">Seno kidal</h2>
 	                                                    </div>
 	                                                    <div class="rating-star  d-inline-block">
 	                                                        <i class="fa fa-fw fa-star"></i>
@@ -58,7 +58,7 @@
 	                                                <div class="user-avatar-address">
 	                                                    <p class="border-bottom pb-3">
 	                                                        <span class="d-xl-inline-block d-block mb-2"><i class="fa fa-map-marker-alt mr-2 text-primary "></i>4045 Denver AvenueLos Angeles, CA 90017</span>
-	                                                        <span class="mb-2 ml-xl-4 d-xl-inline-block d-block">Joined date: 23 June, 2018  </span>
+	                                                        <span class="mb-2 ml-xl-4 d-xl-inline-block d-block">Joined date: 23 June, 2022  </span>
 	                                                        <span class=" mb-2 d-xl-inline-block d-block ml-xl-4">Male 
 	                                                                </span>
 	                                                        <span class=" mb-2 d-xl-inline-block d-block ml-xl-4">29 Year Old </span>

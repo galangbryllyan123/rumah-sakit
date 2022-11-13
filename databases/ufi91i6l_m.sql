@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 13, 2022 at 07:55 PM
+-- Generation Time: Nov 13, 2022 at 08:19 PM
 -- Server version: 5.7.37-cll-lve
 -- PHP Version: 7.4.30
 
@@ -684,6 +684,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `nama_lengkap`, `role`, `email`, `telepon`, `alamat`, `password`) VALUES
+(2, 'senokidal', 'galang', 'pelanggan', 'seno262000@gmail.com', 88227601783, 'akpol', '202cb962ac59075b964b07152d234b70'),
 (13, 'admin', 'Administrator', 'admin', 'seno262000@gmail.com', 81919992000, '', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
