@@ -5,7 +5,7 @@
     <meta name="description" content="Hotel Template">
     <meta name="keywords" content="Hotel, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="M. Ridwan Zalbina">
+    <meta name="author" content="Galang Bryllyan Wicaksono/Seno kidal">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rumah Sakit Semarang</title>
     <link rel="icon" href="<?php echo base_url();?>/assets/frontview/img/favicon.png" sizes="16x16" type="image/png">
@@ -33,16 +33,17 @@
         .floatwa{position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;z-index:100;}.my-floatwa{margin-top:16px;}
     </style>
     <!-- Smartsupp Live Chat script -->
-    <script type="text/javascript"> 
-    var _smartsupp = _smartsupp || {};
-    _smartsupp.key = 'd875578f8c67f208e5d98e81081808de68784061';
-    window.smartsupp||(function(d) {
-    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-    c.type='text/javascript';c.charset='utf-8';c.async=true;
-    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-    })(document);
-    </script>
+    <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'b02805912d594e60ee9d80295935862b5f1a083a';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
 
     <!-- facebook pixel -->
     <!-- Facebook Pixel Code -->
